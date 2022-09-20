@@ -44,11 +44,6 @@ myLibrary.Dvds = theseDvds;
 
 #endregion
 
-Console.Write("Trova velocemente il prodotto che cerchi (dvd/libro) tramite codice identificativo oppure tramite titolo: ");
-string keyWord = Console.ReadLine();
-
-Document searchResult = myLibrary.GetDocument(keyWord);
-
 Console.Write("Inserisci il tuo cognome: ");
 string newSurname = Console.ReadLine();
 
@@ -73,3 +68,10 @@ Console.Write("Inserisci il tuo recapito telefonico: ");
 string newPhone = Console.ReadLine();
 
 User newUser = new User(newSurname, newName, newEmail, newPassword, newPhone);
+
+Console.Write("Trova velocemente il prodotto che cerchi (dvd/libro) tramite codice identificativo oppure tramite titolo: ");
+string keyWord = Console.ReadLine();
+
+Document searchResult = myLibrary.GetDocument(keyWord);
+
+Loan newLoan = new Loan("12", 2210219, 22112019, searchResult);

@@ -1,13 +1,15 @@
 ﻿public class Loan
 {
-    public string idCode;
-    public int startDate;
-    public int endDate;
+    private string idCode;
+    private int startDate;
+    private int endDate;
+    private Document document;
 
-    public Loan(string idCode, int startDate, int endDate)
+    public Loan(string idCode, int startDate, int endDate, Document document)
     {
         this.idCode = idCode;
         this.startDate = startDate;
         this.endDate = endDate;
+        this.document = document;
     }
 }
