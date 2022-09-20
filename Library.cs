@@ -29,4 +29,23 @@
             dvds = value;
         }
     }
+
+    public Document GetDocument(string value)
+    {
+        foreach (Dvd dvd in dvds)
+        {
+            if (dvd.IdCode == value || dvd.Title == value)
+            {
+                return dvd;
+            }
+        }
+        foreach (Book book in books)
+        {
+            if (book.IdCode == value || book.Title == value)
+            {
+                return book;
+            }
+        }
+        return new Document();
+    }
 }

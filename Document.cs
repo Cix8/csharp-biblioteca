@@ -7,6 +7,7 @@
 //un autore (Nome, Cognome).
 public class Document
 {
+    protected string idCode;
     protected string title;
     protected int year;
     protected string genre;
@@ -14,13 +15,33 @@ public class Document
     protected string shelfCode;
     protected string author;
 
-    public Document(string title, int year, string genre, bool available, string shelfCode, string author)
+    public Document()
     {
+        this.title = "Prodotto non trovato";
+    }
+    public Document(string idCode, string title, int year, string genre, string shelfCode, string author)
+    {
+        this.idCode = idCode;
         this.title = title;
         this.year = year;
         this.genre = genre;
-        this.available = available;
+        this.available = true;
         this.shelfCode = shelfCode;
         this.author = author;
+    }
+
+    public string IdCode
+    {
+        get
+        {
+            return this.idCode;
+        }
+    }
+
+    public string Title { 
+        get
+        {
+            return this.title;
+        }
     }
 }
