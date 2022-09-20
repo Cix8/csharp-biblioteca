@@ -49,14 +49,6 @@ public class User
         }
     }
 
-    private string Password
-    {
-        get
-        {
-            return this.password;
-        }
-    }
-
     public bool IsThisPassword(string value)
     {
         if (this.password == "1234" + value + "5678")
