@@ -92,8 +92,12 @@ if(!registeredUser)
     Console.Write("Inserisci una nuova password: ");
     newPassword = Console.ReadLine();
 
+    Console.WriteLine();
+
     Console.Write("Inserisci il tuo recapito telefonico: ");
     string newPhone = Console.ReadLine();
+
+    Console.WriteLine();
 
     User newUser = new User(newSurname, newName, newEmail, newPassword, newPhone);
     
@@ -118,6 +122,7 @@ if(searchResult.Title == "Vouto")
     Console.WriteLine($"Abbiamo trovato un prodotto che combacia con i criteri di ricerca: {searchResult.Title}");
     Console.Write("Vuoi procedere con il prestito? ");
     string userAnswer = Console.ReadLine();
+    Console.WriteLine();
     if (userAnswer.ToLower() == "si" && searchResult.Available)
     {
         Loan newLoan = new Loan("12", 2210219, 22112019, searchResult, currentUser);
