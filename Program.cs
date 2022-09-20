@@ -125,7 +125,7 @@ if(searchResult.Title == "Vouto")
     Console.WriteLine();
     if (userAnswer.ToLower() == "si" && searchResult.Available)
     {
-        Loan newLoan = new Loan("12", 2210219, 22112019, searchResult, currentUser);
+        Loan newLoan = new Loan("12", 20092022, 22102022, searchResult, currentUser);
         Console.WriteLine($"Prestito collegato al prodotto {searchResult.Title} accettato!");
     }
     else if (userAnswer.ToLower() == "si" && !searchResult.Available)
