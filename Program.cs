@@ -75,7 +75,7 @@ string keyWord = Console.ReadLine();
 
 Document searchResult = myLibrary.GetDocument(keyWord);
 
-if(searchResult.Title == "Prodotto non trovato")
+if(searchResult.Title == "Vouto")
 {
     Console.WriteLine("Siamo spiacenti ma attualmente il prodotto richiesto non è presente in nessun scaffale");
 } else

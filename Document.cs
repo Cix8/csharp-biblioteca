@@ -17,7 +17,7 @@ public class Document
 
     public Document()
     {
-        this.title = "Prodotto non trovato";
+        this.title = "Vouto";
     }
     public Document(string idCode, string title, int year, string genre, string shelfCode, string author)
     {
