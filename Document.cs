@@ -44,4 +44,14 @@ public class Document
             return this.title;
         }
     }
+
+    public bool Available { 
+        get
+        {
+            return this.available;
+        } set
+        {
+            this.available = value;
+        }
+    }
 }

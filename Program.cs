@@ -30,6 +30,7 @@ Library myLibrary = new Library("Biblioteca Nazionale");
 
 Book firstBook = new Book("12345678", 200, "Libro", 2018, "Horror", "A18", "Maccio Capatonda");
 Book secondBook = new Book("87654321", 300, "Lo straniero", 1942, "Romanzo", "B88", "Albert Camus");
+secondBook.Available = false;
 
 List < Book > theseBooks = new List<Book> { firstBook, secondBook };
 
@@ -74,4 +75,25 @@ string keyWord = Console.ReadLine();
 
 Document searchResult = myLibrary.GetDocument(keyWord);
 
-Loan newLoan = new Loan("12", 2210219, 22112019, searchResult);
+if(searchResult.Title == "Prodotto non trovato")
+{
+    Console.WriteLine("Siamo spiacenti ma attualmente il prodotto richiesto non è presente in nessun scaffale");
+} else
+{
+    Console.WriteLine($"Abbiamo trovato un prodotto che combacia con i criteri di ricerca: {searchResult.Title}");
+    Console.Write("Vuoi procedere con il prestito? ");
+    string userAnswer = Console.ReadLine();
+    if (userAnswer.ToLower() == "si" && searchResult.Available)
+    {
+        Loan newLoan = new Loan("12", 2210219, 22112019, searchResult);
+        Console.WriteLine($"Prestito collegato al prodotto {searchResult.Title} accettato!");
+    }
+    else if (userAnswer.ToLower() == "si" && !searchResult.Available)
+    {
+        Console.WriteLine($"Il prodotto {searchResult.Title} è già collegato ad un altro prestito");
+    }
+    else
+    {
+        Console.WriteLine("Capisco, vuoi effettuare un'altra ricerca?");
+    }
+}

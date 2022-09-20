@@ -34,14 +34,14 @@
     {
         foreach (Dvd dvd in dvds)
         {
-            if (dvd.IdCode == value || dvd.Title == value)
+            if (dvd.IdCode == value || dvd.Title.ToLower() == value.ToLower())
             {
                 return dvd;
             }
         }
         foreach (Book book in books)
         {
-            if (book.IdCode == value || book.Title == value)
+            if (book.IdCode == value || book.Title.ToLower() == value.ToLower())
             {
                 return book;
             }
