@@ -94,6 +94,6 @@ if(searchResult.Title == "Prodotto non trovato")
     }
     else
     {
-        Console.WriteLine("Capisco, vuoi effettuare un'altra ricerca?");
+        Console.WriteLine("Capisco, peccato...");
     }
 }
