@@ -1,25 +1,31 @@
-﻿//cognome,
+﻿//User
+//cognome,
 //nome,
 //email,
 //password,
 //recapito telefonico
 
+Console.Write("Inserisci il tuo cognome: ");
+string newSurname = Console.ReadLine();
 
+Console.WriteLine();
 
-public class User
-{
-    private string surname;
-    private string name;
-    private string email;
-    private string password;
-    private string phone;
+Console.Write("Inserisci il tuo nome: ");
+string newName = Console.ReadLine();
 
-    public User(string surname, string name, string email, string password, string phone)
-    {
-        this.surname = surname;
-        this.name = name;
-        this.email = email;
-        this.password = password;
-        this.phone = phone;
-    }
-}
+Console.WriteLine();
+
+Console.Write("Inserisci la tua email: ");
+string newEmail = Console.ReadLine();
+
+Console.WriteLine();
+
+Console.Write("Inserisci una nuova password: ");
+string newPassword = Console.ReadLine();
+
+Console.WriteLine();
+
+Console.Write("Inserisci il tuo recapito telefonico: ");
+string newPhone = Console.ReadLine();
+
+User newUser = new User(newSurname, newName, newEmail, newPassword, newPhone);
