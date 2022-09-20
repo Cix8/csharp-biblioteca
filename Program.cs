@@ -5,6 +5,26 @@
 //password,
 //recapito telefonico
 
+//Book
+//ISBN,
+//pagine,
+//titolo,
+//anno,
+//settore(storia, matematica, economia, …),
+//stato(In Prestito, Disponibile),
+//uno scaffale in cui è posizionato,
+//un autore (Nome, Cognome).
+
+//DVD
+//codice seriale,
+//durata,
+//titolo,
+//anno,
+//settore(storia, matematica, economia, …),
+//stato(In Prestito, Disponibile),
+//uno scaffale in cui è posizionato,
+//un autore (Nome, Cognome).
+
 Console.Write("Inserisci il tuo cognome: ");
 string newSurname = Console.ReadLine();
 
