@@ -3,6 +3,7 @@
     private string name;
     private List<Book> books;
     private List<Dvd> dvds;
+    private List<User> users;
 
     public Library(string name)
     {
@@ -27,6 +28,17 @@
         } set
         {
             dvds = value;
+        }
+    }
+
+    public List <User> Users
+    {
+        get
+        {
+            return users;
+        } set
+        {
+            users = value;
         }
     }
 
